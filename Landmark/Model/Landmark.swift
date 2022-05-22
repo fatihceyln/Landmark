@@ -25,7 +25,7 @@ struct Landmark: Hashable, Codable, Identifiable {
         case mountains = "Mountains"
     }
     
-    private var imageName: String // Won't use imageName for outter access
+    private var imageName: String
     var image: Image {
         Image(imageName)
     }
@@ -34,7 +34,7 @@ struct Landmark: Hashable, Codable, Identifiable {
         isFeatured ? Image(imageName + "_feature") : nil
     }
     
-    private var coordinates: Coordinates // Won't use coordinates for outter access
+    private var coordinates: Coordinates 
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
             latitude: coordinates.latitude,
