@@ -56,8 +56,10 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "WatchLandmarks WatchKit Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/WatchLandmarks">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D5C9948283A26AC0042D2F9"
@@ -65,7 +67,7 @@
             BlueprintName = "WatchLandmarks"
             ReferencedContainer = "container:Landmark.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,8 +77,10 @@
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "WatchLandmarks WatchKit Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/WatchLandmarks">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3D5C9948283A26AC0042D2F9"
@@ -84,7 +88,16 @@
             BlueprintName = "WatchLandmarks"
             ReferencedContainer = "container:Landmark.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3D5C9948283A26AC0042D2F9"
+            BuildableName = "WatchLandmarks.app"
+            BlueprintName = "WatchLandmarks"
+            ReferencedContainer = "container:Landmark.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

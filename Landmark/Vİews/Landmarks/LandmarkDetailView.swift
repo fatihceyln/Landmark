@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct LandmarkDetailView: View {
     
@@ -18,9 +19,20 @@ struct LandmarkDetailView: View {
     
     var body: some View {
         ScrollView {
-            MapView(coordinate: landmark.locationCoordinate)
-                .frame(height: 300)
-                .ignoresSafeArea(edges: .top)
+            ZStack(alignment: .topTrailing) {
+                MapView(coordinate: landmark.locationCoordinate)
+                    .frame(height: 300)
+                    .ignoresSafeArea(edges: .top)
+                
+                Button("Open in Maps") {
+                    let destination = MKMapItem(placemark: MKPlacemark(coordinate: landmark.locationCoordinate))
+                    
+                    destination.name = landmark.name
+                    destination.openInMaps()
+                }
+                .buttonStyle(.bordered)
+                .padding()
+            }
             
             CircleImageView(image: landmark.image)
                 .offset(y: -130)
